@@ -1,0 +1,4 @@
+<template>
+  <TodoList />
+  <DomInspector />
+</template>
