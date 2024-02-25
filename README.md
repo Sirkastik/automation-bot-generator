@@ -6,7 +6,7 @@
 
 <br />
 
-# Automata
+# Inspectool
 
 ```
 In Progress
@@ -14,7 +14,7 @@ In Progress
 
 ## Installation
 
-To install the Automata, please follow these steps:
+To install the Inspectool, please follow these steps:
 
 1. Navigate to the [Latest Release](https://github.com/Sirkastik/____/releases/latest) page of the GitHub repository.
 2. Locate the downloadable zipped file (named `chrome_extension.zip`).
@@ -31,11 +31,11 @@ Once you have downloaded and extracted the extension files, you can load it into
 4. Click on the `Load unpacked` button located at the top-left corner of the page. This will open a file dialog.
 5. Navigate to the folder where you extracted the extension files and select the folder inside (named `dist`).
 6. Click the "Select Folder" button to load the extension into Chrome.
-7. Automata should now be installed and ready to use.
+7. Inspectool should now be installed and ready to use.
 
 ## How to Use
 
-To use the Automata, follow these steps:
+To use the Inspectool, follow these steps:
 
 ```
 In progress
@@ -45,7 +45,7 @@ That's it!
 
 ## Contributing
 
-Contributions to Automata are welcome. If you encounter any issues or have suggestions for improvement, please open an issue on the [GitHub repository](https://github.com/Sirkastik/______/issues).
+Contributions to Inspectool are welcome. If you encounter any issues or have suggestions for improvement, please open an issue on the [GitHub repository](https://github.com/Sirkastik/______/issues).
 
 If you would like to contribute code to the project, follow these steps:
 
@@ -62,6 +62,6 @@ This project is licensed under the [MIT License](LICENSE). Feel free to use and 
 
 ## Disclaimer
 
-Automata is provided as-is, without any warranty or guarantee. Use it at your own risk.
+Inspectool is provided as-is, without any warranty or guarantee. Use it at your own risk.
 
 If you encounter any issues or have questions, please reach out by opening an issue on the [GitHub repository](https://github.com/Sirkastik/____/issues).

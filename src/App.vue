@@ -1,4 +1,4 @@
 <template>
   <TodoList />
-  <DomInspector />
+  <PageInspector />
 </template>
