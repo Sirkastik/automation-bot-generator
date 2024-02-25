@@ -19,6 +19,7 @@ const emit = defineEmits<{
   (event: "reset"): void;
   (event: "previous"): void;
   (event: "update:modelValue", value: string): void;
+  (event: "use-parent-elements"): void;
 }>();
 
 const isClickSubAction = computed(() => props.subAction === CLICK_ACTION);
@@ -40,7 +41,19 @@ const onInput = (event: Event) => {
     <main class="flex-grow text-sm">
       <p v-if="!selectedSubElements.length || isClickSubAction">
         Select an <span v-if="isInputSubAction">input</span> element
+        <span v-if="isClickSubAction">to click</span>
       </p>
+      <div class="flex items-center gap-2 py-2">
+        <input
+          id="use-parent-elements-checkbox"
+          type="checkbox"
+          class="rounded"
+          @input="emit('use-parent-elements')"
+        />
+        <label for="use-parent-elements-checkbox">
+          Use selected elements for this action (you don't need to select)
+        </label>
+      </div>
       <div v-if="isInputSubAction && selectedSubElements.length">
         <p class="pb-2">Enter some text</p>
         <input

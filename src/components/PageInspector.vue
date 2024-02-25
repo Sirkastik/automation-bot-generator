@@ -179,6 +179,12 @@ function predictSimilar() {
   // todo: add complex searches
 }
 
+function useParentElements() {
+  selectedSubElements.value = selectedElements.value;
+  selectedElements.value = [];
+  step.value = 2;
+}
+
 async function runBot() {
   enableInspectool.value = false;
   await Promise.all(
@@ -236,6 +242,7 @@ watch(showInspectorPanel, (show) => {
       :sub-action="subAction"
       @reset="reset"
       @previous="step = 2"
+      @use-parent-elements="useParentElements"
     />
   </div>
 
