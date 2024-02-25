@@ -60,6 +60,7 @@ const elements = computed(() =>
 
 const selectedClasses = computed(() => {
   return [...new Set(elements.value.map((e) => e.className.split(" ")).flat())]
+    .filter((className) => !className.includes(":"))
     .filter((className) => !RESERVED_CLASSNAMES.includes(className))
     .filter((className) => {
       return elements.value.every((el) => {
@@ -209,7 +210,7 @@ watch(showInspectorPanel, (show) => {
 <template>
   <div
     v-if="showInspectorPanel"
-    class="fixed z-[99999] bottom-4 left-[5%] right-[5%] bg-gray-50 h-1/5 p-4 rounded-lg border border-gray-300"
+    class="font-inter fixed z-[99999] bottom-4 left-[5%] right-[5%] bg-gray-50 h-[25%] min-h-[h-full] px-8 py-8 rounded-lg border border-gray-300"
     inspectool-ignore
   >
     <ForLoop
@@ -269,7 +270,20 @@ watch(showInspectorPanel, (show) => {
   ></div>
 </template>
 
-<style>
+<style lang="css">
+.font-inter {
+  font-family: "Inter" !important;
+  line-height: 1.3 !important;
+  letter-spacing: normal !important;
+  font-weight: 400 !important;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
 .--user-selected {
   border: 1px solid green !important;
 }

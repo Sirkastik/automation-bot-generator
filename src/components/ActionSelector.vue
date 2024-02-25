@@ -28,7 +28,7 @@ const isScrapeSubAction = computed(() => props.subAction === SCRAPE_ACTION);
 <template>
   <div class="flex flex-col gap-2 h-full">
     <header>
-      <h1 class="font-bold">
+      <h1 class="text-xl font-bold">
         Step 2: Choose a child-action for each loop element
       </h1>
     </header>

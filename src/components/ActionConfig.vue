@@ -32,7 +32,7 @@ const onInput = (event: Event) => {
 <template>
   <div class="flex flex-col gap-2 h-full">
     <header>
-      <h1 class="font-bold">
+      <h1 class="text-xl font-bold">
         Step 3: Click <span v-if="isClickSubAction">a button</span>
         <span v-if="isInputSubAction">an input field</span>
       </h1>

@@ -13,7 +13,7 @@ const emit = defineEmits<{
 <template>
   <div class="flex flex-col gap-2 h-full">
     <header>
-      <h1 class="font-bold">Step 1: For loop</h1>
+      <h1 class="text-xl font-bold">Step 1: For loop</h1>
     </header>
     <main class="flex-grow text-sm">
       <p v-if="selectedElements.length < 2">Select an element</p>
