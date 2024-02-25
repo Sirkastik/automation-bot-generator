@@ -1,7 +1,7 @@
 export const useInspectool = () => {
   const KEY_IGNORE = "inspectool-ignore";
 
-  const enableInspectool = ref(true);
+  const enableInspectool = ref(false);
   const showElementOverlay = ref(true);
   const targetElement = shallowRef<Element | null>(null);
 
@@ -19,7 +19,7 @@ export const useInspectool = () => {
     };
   });
 
-  onMounted(() => toggleInspectool(true));
+  onMounted(() => toggleInspectool(enableInspectool.value));
 
   onUnmounted(() => toggleInspectool(false));
 

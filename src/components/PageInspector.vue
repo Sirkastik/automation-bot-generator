@@ -200,7 +200,7 @@ async function runBot() {
   enableInspectool.value = true;
 }
 
-const showInspectorPanel = ref(true);
+const showInspectorPanel = ref(false);
 
 watch(showInspectorPanel, (show) => {
   toggleInspectool(show);
@@ -210,7 +210,8 @@ watch(showInspectorPanel, (show) => {
 <template>
   <div
     v-if="showInspectorPanel"
-    class="font-inter fixed z-[99999] bottom-4 left-[5%] right-[5%] bg-gray-50 h-[25%] min-h-[h-full] px-8 py-8 rounded-lg border border-gray-300"
+    id="inspector-panel"
+    class="fixed z-[99999] bottom-4 left-[5%] right-[5%] bg-gray-50 h-[25%] min-h-[h-full] px-8 py-8 rounded-lg border border-gray-300"
     inspectool-ignore
   >
     <ForLoop
@@ -271,7 +272,7 @@ watch(showInspectorPanel, (show) => {
 </template>
 
 <style lang="css">
-.font-inter {
+#inspector-panel > * {
   font-family: "Inter" !important;
   line-height: 1.3 !important;
   letter-spacing: normal !important;
