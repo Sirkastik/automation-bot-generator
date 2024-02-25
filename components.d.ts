@@ -7,7 +7,10 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    DomInspector: typeof import('./src/components/DomInspector.vue')['default']
+    ActionConfig: typeof import('./src/components/ActionConfig.vue')['default']
+    ActionSelector: typeof import('./src/components/ActionSelector.vue')['default']
+    ForLoop: typeof import('./src/components/ForLoop.vue')['default']
+    PageInspector: typeof import('./src/components/PageInspector.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TodoList: typeof import('./src/components/TodoList.vue')['default']

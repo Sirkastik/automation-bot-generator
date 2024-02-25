@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref } from "vue";
-
 const task = ref("Take out the trash!");
 
 const todoList = ref([
@@ -44,7 +42,7 @@ const deleteTodo = (index: number) => {
 
 <template>
   <section
-    class="bg-gray-100 p-8 h-[65vh] w-[40vw] mx-auto mt-10 rounded-lg shadow-md"
+    class="todo bg-gray-100 p-8 h-[65vh] w-[40vw] mx-auto mt-10 rounded-lg shadow-md"
   >
     <h1 class="text-xl pt-2 pb-6">TodoList</h1>
     <form class="py-2" v-for="_ in 3" @submit.prevent="addTodo(task)">
@@ -82,8 +80,19 @@ const deleteTodo = (index: number) => {
   </section>
 </template>
 
-<style>
-body {
-  background: lightgoldenrodyellow;
+<style lang="css" scoped>
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+section.todo {
+  font-family: "Manrope", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.3;
+  letter-spacing: normal;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 }
 </style>
