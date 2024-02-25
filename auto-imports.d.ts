@@ -54,15 +54,11 @@ declare global {
   const useAttrs: typeof import('vue')['useAttrs']
   const useCssModule: typeof import('vue')['useCssModule']
   const useCssVars: typeof import('vue')['useCssVars']
-  const useEpisodeKey: typeof import('./src/composables/utils')['useEpisodeKey']
-  const useLibrary: typeof import('./src/composables/api')['useLibrary']
+  const useInspectool: typeof import('./src/composables/useInpectool')['useInspectool']
   const useLink: typeof import('vue-router')['useLink']
-  const useParse: typeof import('./src/composables/utils')['useParse']
   const useRoute: typeof import('vue-router')['useRoute']
   const useRouter: typeof import('vue-router')['useRouter']
-  const useSeriesKey: typeof import('./src/composables/utils')['useSeriesKey']
   const useSlots: typeof import('vue')['useSlots']
-  const useStringify: typeof import('./src/composables/utils')['useStringify']
   const watch: typeof import('vue')['watch']
   const watchEffect: typeof import('vue')['watchEffect']
   const watchPostEffect: typeof import('vue')['watchPostEffect']
@@ -71,5 +67,6 @@ declare global {
 // for type re-export
 declare global {
   // @ts-ignore
-  export type { Component, ComponentPublicInstance, ComputedRef, InjectionKey, PropType, Ref, VNode } from 'vue'
+  export type { Component, ComponentPublicInstance, ComputedRef, ExtractDefaultPropTypes, ExtractPropTypes, ExtractPublicPropTypes, InjectionKey, PropType, Ref, VNode, WritableComputedRef } from 'vue'
+  import('vue')
 }
