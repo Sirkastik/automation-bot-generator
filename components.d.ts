@@ -7,12 +7,31 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    ActionButton: typeof import('./src/components/action/button.vue')['default']
     ActionConfig: typeof import('./src/components/ActionConfig.vue')['default']
     ActionSelector: typeof import('./src/components/ActionSelector.vue')['default']
     ForLoop: typeof import('./src/components/ForLoop.vue')['default']
+    IconsClick: typeof import('./src/components/icons/click.vue')['default']
+    IconsCode: typeof import('./src/components/icons/code.vue')['default']
+    IconsCogs: typeof import('./src/components/icons/cogs.vue')['default']
+    IconsData: typeof import('./src/components/icons/data.vue')['default']
+    IconsDebug: typeof import('./src/components/icons/debug.vue')['default']
+    IconsGears: typeof import('./src/components/icons/gears.vue')['default']
+    IconsInput: typeof import('./src/components/icons/input.vue')['default']
+    IconsInspect: typeof import('./src/components/icons/inspect.vue')['default']
+    IconsInspectool: typeof import('./src/components/icons/inspectool.vue')['default']
+    IconsInspector: typeof import('./src/components/icons/inspector.vue')['default']
+    IconsItem: typeof import('./src/components/icons/item.vue')['default']
+    IconsList: typeof import('./src/components/icons/list.vue')['default']
+    IconsLogo: typeof import('./src/components/icons/logo.vue')['default']
+    IconsLoop: typeof import('./src/components/icons/loop.vue')['default']
     PageInspector: typeof import('./src/components/PageInspector.vue')['default']
+    PaneActions: typeof import('./src/components/pane/actions.vue')['default']
+    PaneSelect: typeof import('./src/components/pane/select.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SectionHeader: typeof import('./src/components/section/header.vue')['default']
+    SectionsHeader: typeof import('./src/components/sections/header.vue')['default']
     TodoList: typeof import('./src/components/TodoList.vue')['default']
   }
 }
